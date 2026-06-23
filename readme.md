@@ -13,7 +13,7 @@
 
 ## `Objetivo`
 
-Transformar dados brutos de vendas em insights de negócio acionáveis — margem por vendedor, receita por região e lucro por produto numa aplicação web interativa.
+Transformar dados brutos de vendas em insights de negócio acionáveis margem por vendedor, receita por região e lucro por produto numa aplicação web interativa.
 
 ---
 
