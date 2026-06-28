@@ -8,6 +8,7 @@
 ![DuckDB](https://img.shields.io/badge/DuckDB-1.5-yellow)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red)
 ![SQL](https://img.shields.io/badge/SQL-DuckDB-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
@@ -38,19 +39,65 @@ CSV → DuckDB (SQL) → pandas → Streamlit (web)
 ## `Como rodar`
 
 ```bash
-
 # Clonar o repositório
-git clone https://github.com/seu-usuario/dashboard_vendas.git
+git clone https://github.com/Arthur-Baptista-dos-Santos/dashboard_vendas.git
 cd dashboard_vendas
 
 # Criar ambiente virtual
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\activate    # Windows
+# source .venv/bin/activate  # Linux/Mac
 
 # Instalar dependências
-pip install pandas duckdb sqlalchemy matplotlib streamlit
+pip install -r requirements.txt
 
-# Executar dashboards
+# Executar o pipeline SQL e subir o dashboard
 python src/banco.py
 streamlit run src/app.py
 ```
+
+---
+
+## `Estrutura`
+
+```
+dashboard_vendas/
+├── dados/
+│   └── vendas.csv                    # dataset de vendas
+├── sql/
+│   ├── 01_receita_por_regiao.sql     # receita e margem por região
+│   ├── 02_ranking_vendedores.sql     # ranking por margem
+│   └── 03_lucro_por_categoria.sql    # lucro por produto
+├── src/
+│   ├── banco.py                      # carrega CSV e persiste no DuckDB
+│   ├── graficos.py                   # gráficos com matplotlib
+│   └── app.py                        # dashboard Streamlit
+├── .gitignore
+├── requirements.txt
+└── readme.md
+```
+
+---
+
+## `Conceitos aplicados`
+
+- **`DuckDB`**: banco analítico embutido, sem servidor, executa SQL direto sobre DataFrames
+- **`SQL analítico`**: queries com GROUP BY, ORDER BY e cálculo de margem para insights de negócio
+- **`Streamlit`**: transforma scripts Python em dashboards web interativos
+- **`Pipeline CSV→SQL→Web`**: fluxo completo de dados brutos a visualização de negócio
+
+---
+
+## `Licença`
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+
+---
+
+## `Autor`
+
+**Arthur Baptista dos Santos**
+RM 565346 — Inteligência Artificial · FIAP 2025–2026
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arthur%20Baptista-0077B5?logo=linkedin)](https://linkedin.com/in/arthur-baptista-dos-santos)
+[![GitHub](https://img.shields.io/badge/GitHub-Arthur--Baptista--dos--Santos-181717?logo=github)](https://github.com/Arthur-Baptista-dos-Santos)
