@@ -88,6 +88,14 @@ dashboard_vendas/
 
 ---
 
+## `Demonstração`
+
+**Painel de Vendas** — KPIs consolidados (R$ 196.520 em receita, 40.9% de margem média) com gráficos de receita por região, margem por vendedor e lucro por produto.
+
+![Dashboard de Vendas](docs/screenshots/dashboard.png)
+
+---
+
 ## `Licença`
 
 Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
